@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '../ui/Button';
+import songalogo from '../../assets/images/songalogo.png';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export function Header() {
 
                         {/* Logo - Updated to Songa */}
                         <div className="flex-shrink-0 flex items-center space-x-2">
-                            <img src="/images/songalogo.png" alt="Songa" className="h-12 sm:h-16" />
+                            <img src={songalogo} alt="Songa" className="h-12 sm:h-16" />
                         </div>
 
                         {/* Desktop Navigation - Updated items */}
