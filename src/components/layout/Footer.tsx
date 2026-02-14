@@ -6,7 +6,7 @@ export function Footer() {
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-6 sm:mb-8 md:mb-12">
                     <div>
-                        <img src="/public/images/songalogo.png" alt="Songa" className="h-12 sm:h-16 md:h-20 mb-3 sm:mb-4 md:mb-6" />
+                        <img src="/images/songalogo.png" alt="Songa" className="h-12 sm:h-16 md:h-20 mb-3 sm:mb-4 md:mb-6" />
                         <p className="text-songa-gray text-xs sm:text-sm leading-relaxed max-w-sm">
                             Songa supports drivers and couriers with clear financial structure, transparent earnings management, and reliable administrative support — all designed to simplify gig work.
                         </p>

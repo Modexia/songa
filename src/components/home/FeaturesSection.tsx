@@ -27,7 +27,7 @@ export function FeaturesSection() {
                     <div className="order-1 lg:order-2 relative">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-square bg-gray-100 dark:bg-gray-800">
                             <img
-                                src="/public/images/GUSTO.jpg"
+                                src="/images/GUSTO.jpg"
                                 alt="Focus on your work — we handle the admin"
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
