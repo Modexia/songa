@@ -27,9 +27,7 @@ export default function Login() {
                     <h2 className="mt-4 sm:mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">
                         Sign in to Songa
                     </h2>
-                    <p className="mt-2 text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                        Or <Link to="/register" className="font-medium text-brand-orange hover:text-orange-500">start your 14-day free trial</Link>
-                    </p>
+                   
                 </div>
                 <form className="mt-6 sm:mt-8 space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                     <div className="rounded-md shadow-sm -space-y-px">
