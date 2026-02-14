@@ -1,5 +1,5 @@
 import { Button } from '../components/ui/Button';
-import { Wallet as WalletIcon, ArrowDownLeft, ArrowUpRight, Banknote, CreditCard } from 'lucide-react';
+import { ArrowDownLeft, ArrowUpRight, Banknote, CreditCard } from 'lucide-react';
 
 const cashlessTransactions = [
     { id: 1, date: 'Feb 12, 2026', description: 'Uber card payout', amount: '+420.00', type: 'in' },

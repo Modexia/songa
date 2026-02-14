@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import { ArrowRight } from 'lucide-react';
-import myHero from '../../assets/images/myHero.jpg';
 
 
 
@@ -10,7 +9,7 @@ export function Hero() {
         <div className="relative text-white overflow-hidden min-h-[100dvh] sm:min-h-screen flex items-center -mt-16 sm:-mt-20 lg:-mt-24 pt-16 sm:pt-20 lg:pt-24">
             {/* Background Image - positioned to show right side, scaled down slightly */}
             <img 
-                src={myHero} 
+                src="/images/myHero.jpg" 
                 alt="Uber driver" 
                 className="absolute inset-0 w-full h-full object-cover object-center scale-100"
             />            {/* Gradient overlay from left to center (strong on left, transparent on right) */}
