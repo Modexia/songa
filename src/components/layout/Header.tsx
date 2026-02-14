@@ -19,7 +19,7 @@ export function Header() {
 
                         {/* Logo - Updated to Songa */}
                         <div className="flex-shrink-0 flex items-center space-x-2">
-                            <img src="/images/songalogo.png" alt="Songa" className="h-12 sm:h-16" />
+                            <img src="/src/public/images/songalogo.png" alt="Songa" className="h-12 sm:h-16" />
                         </div>
 
                         {/* Desktop Navigation - Updated items */}
