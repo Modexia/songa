@@ -3,7 +3,6 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Sidebar from './Sidebar';
 import ChatDrawer from '../features/ChatDrawer';
-import songaLogo from '../../images/songalogo.png';
 
 const routeTitles: Record<string, string> = {
     '/dashboard': 'Dashboard',
@@ -71,7 +70,7 @@ export default function DashboardLayout() {
                     />
                     <div className={`md:hidden fixed inset-y-0 left-0 z-50 w-full max-w-[280px] sm:max-w-[320px] bg-white dark:bg-black shadow-xl flex flex-col transform transition-transform duration-200 ease-out ${drawerVisible ? 'translate-x-0' : '-translate-x-full'}`}>
                         <div className="flex items-center justify-between p-4 border-b dark:border-gray-800 shrink-0">
-                            <img src={songaLogo} alt="Songa" className="h-8" />
+                            <img src="/images/songalogo.png" alt="Songa" className="h-8" />
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}

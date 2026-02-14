@@ -1,6 +1,5 @@
 
 import { Users, Receipt, TrendingUp, Shield } from 'lucide-react';
-import featureImage from '../../images/featureIMG.jpg';
 
 const stats = [
     { number: '10K+', label: 'Active Gig Workers', icon: Users },
@@ -11,7 +10,7 @@ const stats = [
 
 export function StatsSection() {
     return (
-        <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${featureImage})` }}>
+        <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/featureIMG.jpg)' }}>
             {/* Gradient overlay similar to hero */}
             <div className="absolute inset-0 bg-gradient-to-r from-logisco-teal-dark via-logisco-teal/50 to-transparent"></div>
             <div className="absolute inset-0 backdrop-blur-[2px]"></div>
