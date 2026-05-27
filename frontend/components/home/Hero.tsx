@@ -51,26 +51,25 @@ export function Hero() {
               </Button>
             </Link>
             <a href="#work" className="flex-1 sm:flex-none">
-              <button className="w-full inline-flex items-center justify-center gap-2 text-white/80 hover:text-white transition-colors font-semibold px-4 sm:px-6 py-4 border border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5">
-                <Play size={14} className="ml-0.5" />
+              <button className="w-full inline-flex items-center justify-center gap-2 text-white/80 hover:text-white transition-colors font-semibold px-4 sm:px-6 py-4 border border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5 whitespace-nowrap">
+                <Play size={14} />
                 How It Works
               </button>
             </a>
           </div>
 
           {/* Stats row */}
-          <div className="flex flex-wrap gap-6 sm:gap-8 mt-14 animate-fade-in-up delay-400 justify-center sm:justify-start">
+          <div className="flex flex-row gap-6 sm:gap-8 mt-14 animate-fade-in-up delay-400 justify-center sm:justify-start">
             {[
               { value: '10K+', label: 'Active Workers' },
               { value: '500K+', label: 'Receipts Processed' },
               { value: '98%', label: 'Compliance Rate' },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl font-black text-white">{stat.value}</p>
-                <p className="text-white/50 text-sm mt-0.5">{stat.label}</p>
+                <p className="text-2xl sm:text-3xl font-black text-white">{stat.value}</p>
+                <p className="text-white/50 text-xs sm:text-sm mt-0.5">{stat.label}</p>
               </div>
             ))}
-          </div>
         </div>
       </div>
 

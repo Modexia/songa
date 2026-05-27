@@ -98,18 +98,18 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-3 sm:gap-6 relative">
-            {/* Connecting line */}
-            <div className="hidden sm:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#FF6B35]/30 to-[#006072]/30" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            {/* Connecting line (desktop) */}
+            <div className="hidden md:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#FF6B35]/30 to-[#006072]/30" />
 
             {steps.map((step, i) => (
-              <div key={i} className={`relative bg-gradient-to-br ${step.color} rounded-2xl p-4 sm:p-8 border ${step.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 reveal`} style={{ animationDelay: `${i * 0.15}s` }}>
-                <span className="absolute top-3 right-3 text-3xl sm:text-5xl font-black text-[#0A0F1E]/10 leading-none">{step.number}</span>
-                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-md flex items-center justify-center mb-3 sm:mb-5">
-                  <step.icon className="w-5 h-5 sm:w-7 sm:h-7 text-[#FF6B35]" />
+              <div key={i} className={`relative bg-gradient-to-br ${step.color} rounded-3xl p-6 sm:p-8 border ${step.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 reveal`} style={{ animationDelay: `${i * 0.15}s` }}>
+                <span className="absolute top-5 right-5 text-5xl font-black text-[#0A0F1E]/10 leading-none">{step.number}</span>
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white shadow-md flex items-center justify-center mb-5">
+                  <step.icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#FF6B35]" />
                 </div>
-                <h3 className="text-sm sm:text-xl font-black text-[#0A0F1E] mb-1 sm:mb-2 leading-tight">{step.title}</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed hidden sm:block">{step.desc}</p>
+                <h3 className="text-lg sm:text-xl font-black text-[#0A0F1E] mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
