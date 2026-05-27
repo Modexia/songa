@@ -23,6 +23,7 @@ export function FeaturesSection() {
                 src="/feature.png"
                 alt="Songa earnings dashboard"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               {/* Floating badge */}
