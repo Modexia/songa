@@ -57,13 +57,8 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link href="/login">
-              <span className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer">
+              <Button variant="outline" size="md">
                 Sign In
-              </span>
-            </Link>
-            <Link href="/login">
-              <Button variant="gradient" size="md">
-                Get Started
               </Button>
             </Link>
           </div>
@@ -96,9 +91,6 @@ export function Header() {
             <div className="pt-3 pb-1 space-y-2">
               <Link href="/login" onClick={() => setMenuOpen(false)} className="block">
                 <Button variant="outline" className="w-full">Sign In</Button>
-              </Link>
-              <Link href="/login" onClick={() => setMenuOpen(false)} className="block">
-                <Button variant="gradient" className="w-full">Get Started</Button>
               </Link>
             </div>
           </div>

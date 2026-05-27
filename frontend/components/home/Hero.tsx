@@ -27,21 +27,8 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="max-w-3xl">
-          {/* Social proof pill */}
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 animate-fade-in">
-            <div className="flex -space-x-1.5">
-              {['#FF6B35','#006072','#0A0F1E'].map((c, i) => (
-                <div key={i} className="w-6 h-6 rounded-full border-2 border-white/20" style={{ background: c }} />
-              ))}
-            </div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={12} className="fill-[#FF6B35] text-[#FF6B35]" />
-              ))}
-            </div>
-            <span className="text-white/80 text-xs font-medium">Trusted by 10,000+ gig workers</span>
-          </div>
+        <div className="max-w-3xl mx-auto sm:mx-0 text-center sm:text-left">
+          {/* Social proof pill removed per user request */}
 
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.92] tracking-tight mb-6 animate-fade-in-up">
@@ -51,30 +38,28 @@ export function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mb-10 animate-fade-in-up delay-200">
+          <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mb-10 animate-fade-in-up delay-200 mx-auto sm:mx-0">
             Become a driver or courier in minutes. Songa handles contracts, taxes, and compliance — so you can focus entirely on your income.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-            <Link href="/login">
-              <Button variant="gradient" size="xl" className="w-full sm:w-auto">
-                Get Started Free
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+          <div className="flex flex-row gap-3 sm:gap-4 animate-fade-in-up delay-300 justify-center sm:justify-start">
+            <Link href="/login" className="flex-1 sm:flex-none">
+              <Button variant="gradient" size="xl" className="w-full sm:w-auto whitespace-nowrap">
+                Get Started
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </Button>
             </Link>
-            <a href="#work">
-              <button className="inline-flex items-center gap-3 text-white/80 hover:text-white transition-colors font-semibold px-6 py-4 group">
-                <span className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-[#FF6B35] group-hover:bg-[#FF6B35]/10 transition-all">
-                  <Play size={16} className="ml-0.5" />
-                </span>
-                See How It Works
+            <a href="#work" className="flex-1 sm:flex-none">
+              <button className="w-full inline-flex items-center justify-center gap-2 text-white/80 hover:text-white transition-colors font-semibold px-4 sm:px-6 py-4 border border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5">
+                <Play size={14} className="ml-0.5" />
+                How It Works
               </button>
             </a>
           </div>
 
           {/* Stats row */}
-          <div className="flex flex-wrap gap-8 mt-14 animate-fade-in-up delay-400">
+          <div className="flex flex-wrap gap-6 sm:gap-8 mt-14 animate-fade-in-up delay-400 justify-center sm:justify-start">
             {[
               { value: '10K+', label: 'Active Workers' },
               { value: '500K+', label: 'Receipts Processed' },

@@ -14,15 +14,12 @@ const navLinks = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/dashboard/wallet', icon: Wallet, label: 'Wallet & Earnings' },
   { to: '/dashboard/expenses', icon: FileText, label: 'Expenses (OCR)' },
-  { to: '/dashboard/profile', icon: User, label: 'Legal & Profile' },
   { to: '/dashboard/map', icon: MapIcon, label: 'Real-Time Heatmaps' },
   { to: '/dashboard/fuel-cards', icon: CreditCard, label: 'Fuel Cards' },
 ];
 
 const bottomLinks = [
   { to: '/dashboard/settings', icon: Settings, label: 'Settings' },
-  { to: '/dashboard/notifications', icon: Bell, label: 'Notifications' },
-  { to: '/dashboard/faq', icon: HelpCircle, label: 'FAQ & Help' },
 ];
 
 interface SidebarProps {
@@ -66,26 +63,6 @@ export function Sidebar({ onNavigate }: SidebarProps) {
       {/* Logo area */}
       <div className="p-6 border-b border-white/5">
         <SongaLogo theme="dark" iconSize={36} />
-      </div>
-
-      {/* User profile mini */}
-      <div className="mx-4 my-4 p-4 rounded-2xl bg-white/5 border border-white/10">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF6B35] to-[#006072] flex items-center justify-center font-bold text-white text-sm shrink-0">
-            JK
-          </div>
-          <div className="min-w-0">
-            <p className="text-white font-semibold text-sm truncate">Jan Kowalski</p>
-            <p className="text-white/40 text-xs truncate">jan@example.com</p>
-          </div>
-        </div>
-        <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between">
-          <span className="text-xs text-green-400 font-semibold flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block animate-pulse" />
-            Active
-          </span>
-          <span className="text-xs text-white/30">Uber · Bolt</span>
-        </div>
       </div>
 
       {/* Main nav */}

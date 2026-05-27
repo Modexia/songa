@@ -4,6 +4,7 @@ import { Hero } from '@/components/home/Hero';
 import { FeaturesSection } from '@/components/home/FeaturesSection';
 import { StatsSection } from '@/components/home/StatsSection';
 import { ServicesSection } from '@/components/home/ServicesSection';
+import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { UserCheck, FileCheck, Zap } from 'lucide-react';
@@ -103,7 +104,7 @@ export default function LandingPage() {
 
             {steps.map((step, i) => (
               <div key={i} className={`relative bg-gradient-to-br ${step.color} rounded-3xl p-8 border ${step.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 reveal`} style={{ animationDelay: `${i * 0.15}s` }}>
-                <span className="absolute top-6 right-6 text-6xl font-black text-gray-100/60 leading-none">{step.number}</span>
+                <span className="absolute top-6 right-6 text-6xl font-black text-[#0A0F1E]/10 leading-none">{step.number}</span>
                 <div className="w-14 h-14 rounded-2xl bg-white shadow-md flex items-center justify-center mb-6">
                   <step.icon className="w-7 h-7 text-[#FF6B35]" />
                 </div>
@@ -147,6 +148,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <ScrollReveal />
       <Footer />
     </main>
   );

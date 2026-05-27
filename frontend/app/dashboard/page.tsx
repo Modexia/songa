@@ -38,7 +38,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="space-y-6 max-w-[1400px]">
+    <div className="space-y-6 w-full">
       {/* Welcome header */}
       <div className="relative bg-gradient-to-r from-[#004d5b] to-[#006072] rounded-2xl p-6 sm:p-8 text-white overflow-hidden shadow-xl">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(white 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />

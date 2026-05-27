@@ -10,7 +10,7 @@ const transactions = [
 
 export default function WalletPage() {
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 w-full">
       {/* Credit card visual */}
       <div className="relative bg-gradient-to-br from-[#0A0F1E] via-[#004d5b] to-[#006072] rounded-3xl p-7 sm:p-8 text-white overflow-hidden shadow-2xl">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(white 1px, transparent 1px)`, backgroundSize: '18px 18px' }} />
