@@ -8,10 +8,11 @@ import { SongaLogo } from '@/components/ui/SongaLogo';
 
 const routeTitles: Record<string, string> = {
   '/dashboard': 'Dashboard',
-  '/dashboard/wallet': 'Wallet',
-  '/dashboard/receipts': 'Invoices',
-  '/dashboard/settlements': 'Settlements',
-  '/dashboard/account': 'Account',
+  '/dashboard/wallet': 'Wallet & Earnings',
+  '/dashboard/expenses': 'Expenses (OCR)',
+  '/dashboard/profile': 'Legal & Profile',
+  '/dashboard/map': 'Real-Time Heatmaps',
+  '/dashboard/fuel-cards': 'Fuel Cards',
   '/dashboard/settings': 'Settings',
   '/dashboard/notifications': 'Notifications',
   '/dashboard/faq': 'FAQ & Help',
@@ -70,6 +71,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             <div className="hidden sm:flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl px-4 py-2.5 w-48">
               <Search size={15} className="text-gray-400" />
               <input placeholder="Search..." className="bg-transparent text-sm outline-none text-gray-600 placeholder-gray-300 w-full" />
+            </div>
+
+            {/* Language Switcher */}
+            <div className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-100 rounded-xl px-2 py-1 cursor-pointer">
+              <span className="text-sm font-semibold text-[#0A0F1E] px-2 py-1 bg-white shadow-sm rounded-lg">PL</span>
+              <span className="text-sm font-medium text-gray-400 px-2 py-1 hover:text-gray-600 transition-colors">UK</span>
+              <span className="text-sm font-medium text-gray-400 px-2 py-1 hover:text-gray-600 transition-colors">EN</span>
             </div>
 
             {/* Notifications */}

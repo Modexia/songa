@@ -1,4 +1,7 @@
-import { Wallet, TrendingUp, Download, Calendar, ArrowUpRight, Upload, FileText, MessageCircle } from 'lucide-react';
+'use client';
+
+import { useState } from 'react';
+import { Wallet, TrendingUp, Download, Calendar, ArrowUpRight, Upload, FileText, MessageCircle, X } from 'lucide-react';
 
 const platformData = [
   { platform: 'Uber', amount: '1,240.50', color: '#000', trips: '48 trips', pct: 75 },
@@ -22,6 +25,18 @@ const quickActions = [
 ];
 
 export default function DashboardPage() {
+  const [showCashoutModal, setShowCashoutModal] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const handleCashout = () => {
+    setIsProcessing(true);
+    setTimeout(() => {
+      setIsProcessing(false);
+      setShowCashoutModal(false);
+      // Here you would typically show a success toast
+    }, 2000);
+  };
+
   return (
     <div className="space-y-6 max-w-[1400px]">
       {/* Welcome header */}
@@ -33,9 +48,12 @@ export default function DashboardPage() {
             <h1 className="text-2xl sm:text-3xl font-black mb-1">Welcome back, Jan! 👋</h1>
             <p className="text-teal-200">Here&apos;s your earnings overview for this week</p>
           </div>
-          <button className="flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e85d2a] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all hover:shadow-lg hover:shadow-orange-500/30 shrink-0 w-full sm:w-auto justify-center">
+          <button
+            onClick={() => setShowCashoutModal(true)}
+            className="flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e85d2a] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all hover:shadow-lg hover:shadow-orange-500/30 shrink-0 w-full sm:w-auto justify-center"
+          >
             <ArrowUpRight size={18} />
-            Withdraw Funds
+            Instant Cashout
           </button>
         </div>
       </div>
@@ -152,6 +170,54 @@ export default function DashboardPage() {
           ))}
         </div>
       </div>
+      {/* Instant Cashout Modal */}
+      {showCashoutModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowCashoutModal(false)} />
+          <div className="relative bg-white rounded-3xl w-full max-w-md p-6 sm:p-8 shadow-2xl animate-fade-in-up">
+            <button
+              onClick={() => setShowCashoutModal(false)}
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X size={20} />
+            </button>
+            
+            <div className="mb-6">
+              <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center mb-4">
+                <Wallet className="text-[#FF6B35]" size={24} />
+              </div>
+              <h2 className="text-2xl font-black text-[#0A0F1E] mb-2">Instant Cashout</h2>
+              <p className="text-gray-500 text-sm">Transfer your settled balance directly to your linked bank account via Express Elixir.</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-5 mb-6 border border-gray-100 space-y-3">
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-gray-500">Settled Balance</span>
+                <span className="font-bold text-[#0A0F1E]">1,320.00 PLN</span>
+              </div>
+              <div className="flex justify-between items-center text-sm">
+                <span className="text-gray-500">Instant Processing Fee</span>
+                <span className="font-bold text-red-500">- 5.00 PLN</span>
+              </div>
+              <div className="pt-3 border-t border-gray-200 flex justify-between items-center">
+                <span className="font-semibold text-[#0A0F1E]">You will receive</span>
+                <span className="font-black text-xl text-green-600">1,315.00 PLN</span>
+              </div>
+            </div>
+
+            <button
+              onClick={handleCashout}
+              disabled={isProcessing}
+              className="w-full flex justify-center items-center gap-2 bg-[#FF6B35] hover:bg-[#e85d2a] disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-6 py-4 rounded-xl font-bold transition-all shadow-lg shadow-orange-500/20"
+            >
+              {isProcessing ? 'Processing Transfer...' : 'Confirm Cashout'}
+            </button>
+            <p className="text-center text-xs text-gray-400 mt-4">
+              Funds usually arrive within 5 minutes (via BLIK / Express Elixir).
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -10,7 +10,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0A0F1E]">
       {/* Background image */}
       <Image
-        src="/hero.png"
+        src="/hero_new.png"
         alt="Gig worker in a modern city"
         fill
         priority

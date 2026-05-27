@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard, Wallet, FileText, BarChart3, User,
-  Settings, Bell, HelpCircle, LogOut, Moon, Sun,
+  Settings, Bell, HelpCircle, LogOut, Moon, Sun, Map as MapIcon, CreditCard
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SongaLogo } from '@/components/ui/SongaLogo';
@@ -12,10 +12,11 @@ import { useState } from 'react';
 
 const navLinks = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/dashboard/wallet', icon: Wallet, label: 'Wallet' },
-  { to: '/dashboard/receipts', icon: FileText, label: 'Invoices' },
-  { to: '/dashboard/settlements', icon: BarChart3, label: 'Settlements' },
-  { to: '/dashboard/account', icon: User, label: 'Account' },
+  { to: '/dashboard/wallet', icon: Wallet, label: 'Wallet & Earnings' },
+  { to: '/dashboard/expenses', icon: FileText, label: 'Expenses (OCR)' },
+  { to: '/dashboard/profile', icon: User, label: 'Legal & Profile' },
+  { to: '/dashboard/map', icon: MapIcon, label: 'Real-Time Heatmaps' },
+  { to: '/dashboard/fuel-cards', icon: CreditCard, label: 'Fuel Cards' },
 ];
 
 const bottomLinks = [
