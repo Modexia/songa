@@ -125,7 +125,7 @@ export default function SettingsPage() {
               </div>
               {isStudent && (
                 <div className="mt-4 p-4 bg-orange-50 border border-[#FF6B35]/30 rounded-xl flex items-start gap-3 animate-fade-in-up">
-                  <AlertCircle className="text-[#FF6B35] shrink-0" size={18} mt={0.5} />
+                  <AlertCircle className="text-[#FF6B35] shrink-0 mt-0.5" size={18} />
                   <div>
                     <p className="text-sm font-semibold text-[#FF6B35]">Upload Student ID (Legitymacja)</p>
                     <p className="text-xs text-[#FF6B35]/80 mt-1">Please upload a valid student ID card to apply these tax exemptions.</p>
