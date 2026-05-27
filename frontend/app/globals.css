@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --songa-orange: #FF6B35;
+  --songa-teal: #006072;
+  --songa-teal-dark: #004d5b;
+  --songa-black: #0A0F1E;
+  --songa-dark: #0D1117;
+}
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #0A0F1E;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+
+  --color-songa-orange: #FF6B35;
+  --color-songa-orange-light: #FF8F5E;
+  --color-songa-teal: #006072;
+  --color-songa-teal-dark: #004d5b;
+  --color-songa-black: #0A0F1E;
+  --color-songa-dark: #0D1117;
+  --color-songa-gray: #64748B;
+  --color-songa-light: #F8FAFC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #0A0F1E;
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode */
+.dark body {
+  background: #0A0F1E;
+  color: #F8FAFC;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6B35;
+  border-radius: 3px;
+}
+
+/* ─── Animations ─────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes marquee-rtl {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,107,53,0.3); }
+  50%       { box-shadow: 0 0 40px rgba(255,107,53,0.6); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── Utility classes ──────────────────────────── */
+.animate-fade-in-up      { animation: fade-in-up 0.6s ease-out both; }
+.animate-fade-in         { animation: fade-in 0.5s ease-out both; }
+.animate-slide-in-left   { animation: slide-in-left 0.6s ease-out both; }
+.animate-slide-in-right  { animation: slide-in-right 0.6s ease-out both; }
+.animate-marquee-rtl     { animation: marquee-rtl 40s linear infinite; }
+.animate-float           { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow      { animation: pulse-glow 2s ease-in-out infinite; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* Glass morphism */
+.glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-dark {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10, 15, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-white {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6B35, #FF8F5E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-teal {
+  background: linear-gradient(135deg, #006072, #008fa8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scroll-reveal (JS adds .revealed) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shimmer gradient for loading states */
+.shimmer-bg {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% auto;
+  animation: shimmer 1.5s linear infinite;
+}
