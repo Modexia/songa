@@ -70,6 +70,7 @@ export function Hero() {
                 <p className="text-white/50 text-xs sm:text-sm mt-0.5">{stat.label}</p>
               </div>
             ))}
+          </div>
         </div>
       </div>
 
