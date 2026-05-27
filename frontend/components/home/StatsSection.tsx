@@ -26,10 +26,10 @@ export function StatsSection() {
           <span className="text-[#FF6B35] font-bold text-xs uppercase tracking-widest bg-[#FF6B35]/10 px-3 py-1.5 rounded-full">
             By The Numbers
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-4 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-4 mb-3">
             Results That Speak
           </h2>
-          <p className="text-white/50 text-lg max-w-xl mx-auto">
+          <p className="text-white/50 text-base sm:text-lg max-w-xl mx-auto">
             Thousands of gig workers across Poland trust Songa to manage their earnings.
           </p>
         </div>

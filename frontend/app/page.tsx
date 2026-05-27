@@ -86,30 +86,30 @@ export default function LandingPage() {
       {/* How It Works */}
       <section className="py-20 lg:py-32 bg-white" id="work">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-12 sm:mb-16 reveal">
             <span className="inline-block text-[#FF6B35] font-bold text-xs uppercase tracking-widest bg-[#FF6B35]/10 px-3 py-1.5 rounded-full mb-4">
               How It Works
             </span>
-            <h2 className="text-4xl sm:text-5xl font-black text-[#0A0F1E] mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A0F1E] mb-4">
               Get Started in 3 Simple Steps
             </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">
+            <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto">
               Start working with Uber, Bolt, Glovo, or Wolt today. We handle all the paperwork.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Connecting line (desktop) */}
-            <div className="hidden md:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#FF6B35]/30 to-[#006072]/30" />
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 relative">
+            {/* Connecting line */}
+            <div className="hidden sm:block absolute top-14 left-1/3 right-1/3 h-0.5 bg-gradient-to-r from-[#FF6B35]/30 to-[#006072]/30" />
 
             {steps.map((step, i) => (
-              <div key={i} className={`relative bg-gradient-to-br ${step.color} rounded-3xl p-8 border ${step.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 reveal`} style={{ animationDelay: `${i * 0.15}s` }}>
-                <span className="absolute top-6 right-6 text-6xl font-black text-[#0A0F1E]/10 leading-none">{step.number}</span>
-                <div className="w-14 h-14 rounded-2xl bg-white shadow-md flex items-center justify-center mb-6">
-                  <step.icon className="w-7 h-7 text-[#FF6B35]" />
+              <div key={i} className={`relative bg-gradient-to-br ${step.color} rounded-2xl p-4 sm:p-8 border ${step.border} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 reveal`} style={{ animationDelay: `${i * 0.15}s` }}>
+                <span className="absolute top-3 right-3 text-3xl sm:text-5xl font-black text-[#0A0F1E]/10 leading-none">{step.number}</span>
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-md flex items-center justify-center mb-3 sm:mb-5">
+                  <step.icon className="w-5 h-5 sm:w-7 sm:h-7 text-[#FF6B35]" />
                 </div>
-                <h3 className="text-xl font-black text-[#0A0F1E] mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="text-sm sm:text-xl font-black text-[#0A0F1E] mb-1 sm:mb-2 leading-tight">{step.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed hidden sm:block">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -126,21 +126,21 @@ export default function LandingPage() {
           <span className="inline-block text-[#FF6B35] font-bold text-xs uppercase tracking-widest bg-[#FF6B35]/10 px-3 py-1.5 rounded-full mb-6">
             Ready to Start?
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight">
             Your Gig Journey Starts{' '}
             <span className="gradient-text">Here.</span>
           </h2>
-          <p className="text-white/50 text-xl mb-10 max-w-2xl mx-auto">
+          <p className="text-white/50 text-base sm:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto">
             Join thousands of drivers and couriers across Poland who trust Songa to manage their gig income.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-row gap-3 justify-center">
             <Link href="/login">
-              <Button variant="gradient" size="xl">
-                Create Free Account
+              <Button variant="gradient" size="md" className="sm:!px-10 sm:!h-15 sm:!text-lg whitespace-nowrap">
+                Create Account
               </Button>
             </Link>
             <a href="mailto:hello@songa.pl">
-              <Button variant="ghost" size="xl">
+              <Button variant="ghost" size="md" className="sm:!px-10 sm:!h-15 sm:!text-lg whitespace-nowrap">
                 Contact Us
               </Button>
             </a>

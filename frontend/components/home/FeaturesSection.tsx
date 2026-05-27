@@ -43,12 +43,12 @@ export function FeaturesSection() {
             <span className="inline-block text-[#FF6B35] font-bold text-xs uppercase tracking-widest mb-4 bg-[#FF6B35]/10 px-3 py-1.5 rounded-full">
               Why Songa
             </span>
-            <h2 className="text-4xl sm:text-5xl font-black text-[#0A0F1E] leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A0F1E] leading-tight mb-5">
               We Handle the Admin.{' '}
               <span className="gradient-text-teal">You Focus</span>{' '}
               on Earning.
             </h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-8">
+            <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-8">
               Songa gives drivers and couriers a structured, professional financial backbone — without the complexity. Clear systems. Zero confusion.
             </p>
 

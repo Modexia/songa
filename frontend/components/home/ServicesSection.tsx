@@ -57,11 +57,11 @@ export function ServicesSection() {
           <span className="inline-block text-[#FF6B35] font-bold text-xs uppercase tracking-widest bg-[#FF6B35]/10 px-3 py-1.5 rounded-full mb-4">
             Our Services
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#0A0F1E] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A0F1E] mb-4">
             Built for{' '}
             <span className="gradient-text">Gig Workers</span>
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500 text-base sm:text-lg">
             Everything you need to earn with confidence and stay compliant — all in one place.
           </p>
         </div>
